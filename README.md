@@ -74,7 +74,7 @@ To communicate with ngspice, construct an NgspiceCircuit.
 
 ![image](https://i.imgur.com/fgRiYvh.png)
 
-To send a netlist to ngspice for analysis, use the StartAnalysis function and provide the netlist. The analysis starts in the background thread of ngspice and can be stopped using the StopAnalysis function. Ngspice cannot solve multiple circuits at the same time. If multiple circuits start the analysis at the same time, they are scheduled for ngspice to start one after another.
+To send a netlist to ngspice for analysis, use the StartAnalysis function and provide the netlist. The analysis starts in the background thread of ngspice and can be stopped using the StopAnalysis function. Ngspice can solve only one circuit at a time. In case there are more than one, they are scheduled for ngspice to start one by one.
 
 ![image](https://i.imgur.com/0IUvBns.png)
 
