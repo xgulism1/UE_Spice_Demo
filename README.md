@@ -33,7 +33,7 @@ This is a demo project for the Spice plugin for [Unreal Engine](https://www.unre
 ![image](https://i.imgur.com/WxxYVYe.png)
 
 ## Demo project tutorial
-[Video demonstration](https://youtu.be/oU_Hj6tyRlU)
+[Video demonstration](https://youtu.be/dlcTaUPAE0g)
 
 The demo project is made using Widget Blueprints.
 
