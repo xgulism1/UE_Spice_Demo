@@ -99,4 +99,4 @@ Additional C++ functions are exposed for Blueprints to allow more performant man
 ![image](https://i.imgur.com/LMaI7US.png)
 
 # License
-Ngspice is open source under the [BSD-3-Clause license](https://sourceforge.net/p/ngspice/ngspice/ci/master/tree/COPYING).
+Ngspice is open source under the [3-clause BSD license](https://sourceforge.net/p/ngspice/ngspice/ci/master/tree/COPYING).
