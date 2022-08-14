@@ -65,7 +65,7 @@ To control the graph panel, click and drag to move and scroll the mouse wheel to
 
 ![image](https://i.imgur.com/9oQ0FmD.png)
 
-Users can change the vectors for the X and Y axis using the comboboxes and toggle the display of real and imaginary values in the controls on the right of the graph panel.
+Users can change the vectors for the X and Y axes using the comboboxes and toggle the display of real and imaginary values in the controls on the right of the graph panel.
 
 ![image](https://i.imgur.com/9xDY8uW.png)
 
