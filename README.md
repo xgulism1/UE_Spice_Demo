@@ -8,23 +8,23 @@ This is a demo project for the Spice plugin for [Unreal Engine](https://www.unre
 * [License](#license)
 
 ## Build demo project
-1. Download the demo project
+1. Download the demo project.
 
 ![image](https://i.imgur.com/zGo7Soh.png)
 
-2. Create a Plugins folder
+2. Create a Plugins folder.
 
 ![image](https://i.imgur.com/lIf9K0M.png)
 
-3. Add the plugin to the Plugins folder
+3. Add the plugin to the Plugins folder.
 
 ![image](https://i.imgur.com/Srvmf49.png)
 
-4. Open the ElectronicCircuit.uproject
+4. Open the ElectronicCircuit.uproject.
 
 ![image](https://i.imgur.com/flSHs1U.png)
 
-5. Rebuild the project
+5. Rebuild the project.
 
 ![image](https://i.imgur.com/trg3tkL.png)
 
