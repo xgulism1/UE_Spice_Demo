@@ -13,7 +13,8 @@
 	"Plugins": [
 		{
 			"Name": "Spice",
-			"Enabled": true
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/20c869cbe45b4b999e677c1f22fa4381"
 		}
 	]
 }
