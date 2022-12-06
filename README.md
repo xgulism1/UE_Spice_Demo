@@ -1,5 +1,5 @@
 # UE_Spice_Demo
-This is a demo project for the Spice plugin for [Unreal Engine](https://www.unrealengine.com). The plugin utilizes [ngspice](https://ngspice.sourceforge.io/) - the spice simulator for electric and electronic circuits.
+This is a demo project for the Spice plugin for [Unreal Engine](https://www.unrealengine.com) available on the [marketplace](https://www.unrealengine.com/marketplace/en-US/product/20c869cbe45b4b999e677c1f22fa4381). The plugin utilizes [ngspice](https://ngspice.sourceforge.io/) - the spice simulator for electric and electronic circuits.
 
 ## Table of contents
 * [Build demo project](#build-demo-project)
