@@ -1,4 +1,4 @@
-// Copyright (C) 2022 Martin Gulis. All Rights Reserved.
+// Copyright (C) 2022-2023 Martin Gulis. All Rights Reserved.
 
 using UnrealBuildTool;
 using System.Collections.Generic;
