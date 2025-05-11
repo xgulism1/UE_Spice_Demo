@@ -63,62 +63,62 @@ The clear button clears the analysis data.
 ![image](Assets/Demo_11.png)
 
 ## Blueprints tutorial
-To communicate with ngspice, construct an NgspiceCircuit.
+To communicate with ngspice, construct an `NgspiceCircuit`.
 
 ![image](Assets/BP_01.png)
 
-To start an analysis, use the StartAnalysis function and provide a netlist.
+To start an analysis, use the `StartAnalysis` function and provide a netlist.
 StepCount can be set to run only a fixed number of time-points and then pause or set (StepCount <= 0) to run until finish.
 The analysis starts in the background thread of ngspice.
 
 ![image](Assets/BP_02.png)
 
-To request a pause or resume of an analysis, use the SetAnalysisShouldPause function.
+To request a pause or resume of an analysis, use the `SetAnalysisShouldPause` function.
 
 ![image](Assets/BP_03.png)
 
-The state of the pause request is indicated by the ShouldPause function.
+The state of the pause request is indicated by the `ShouldPause` function.
 
 ![image](Assets/BP_04.png)
 
-To stop an analysis, use the StopAnalysis function.
+To stop an analysis, use the `StopAnalysis` function.
 
 ![image](Assets/BP_05.png)
 
-The IsAnalysing function indicates the analysis of the circuit is in progress.
+The `IsAnalysing` function indicates the analysis of the circuit is in progress.
 Ngspice can solve only one circuit at a time.
 In case more than one circuit starts the analysis, they are scheduled for ngspice to start one by one.
 Beware of paused analyses, the analysis of the next circuit cannot start while the previous one is paused.
 
 ![image](Assets/BP_06.png)
 
-AnalysisStartedDelegate fires when the background thread starts.
-AnalysisPausedDelegate fires when the background thread pauses.
-AnalysisFinishedDelegate fires when the background thread finishes.
+`AnalysisStartedDelegate` fires when the background thread starts.
+`AnalysisPausedDelegate` fires when the background thread pauses.
+`AnalysisFinishedDelegate` fires when the background thread finishes.
 
 ![image](Assets/BP_07.png)
 
-The state of the background thread visible from the Game Thread can be obtained using the IsRunning function.
+The state of the background thread visible from the Game Thread can be obtained using the `IsRunning` function.
 There is no event to be fired when new data is calculated by ngspice, because it would fire too many times per tick and slow down the Game Thread.
-To get data during the analysis up to that point, the tick event together with the IsRunning function should be used.
+To get data during the analysis up to that point, the `Tick` event together with the `IsRunning` function should be used.
 
 ![image](Assets/BP_08.png)
 
-To update an analysis, use the UpdateAnalysisWithAlter, UpdateAnalysisWithAltermod or UpdateAnalysisWithStepCount function.
+To update an analysis, use the `UpdateAnalysisWithAlter`, `UpdateAnalysisWithAltermod` or `UpdateAnalysisWithStepCount` function.
 The changes will be processed when the analysis starts or resumes.
-To apply the changes if the analysis is running, restart it by pausing it with the SetAnalysisShouldPause and resuming it with the SetAnalysisShouldPause after the AnalysisPausedDelegate is called.
+To apply the changes if the analysis is running, restart it by pausing it with the `SetAnalysisShouldPause` function and resuming it with the `SetAnalysisShouldPause` function after the `AnalysisPausedDelegate` is called.
 
 ![image](Assets/BP_09.png)
 
-Output from ngspice consists of StdOutput (an Array of Strings) and Analysis Values (a Map of Vector2D Arrays).
-StdOutput can be retrieved using the GetStdOutput function.
-Keys to the map of Analysis Values can be retrieved using the GetAnalysisValueKeys function.
-Each key is an input to the GetAnalysisValues function to get the array of values for the particular vector.
+Output from ngspice consists of Std Output (an Array of Strings) and Analysis Values (a Map of Vector2D Arrays).
+Std Output can be retrieved using the `GetStdOutput` function.
+Keys to the map of Analysis Values can be retrieved using the `GetAnalysisValueKeys` function.
+Each key is an input to the `GetAnalysisValues` function to get the array of values for the particular vector.
 Each value is a Vector2D to represent the real and imaginary parts.
 
 ![image](Assets/BP_10.png)
 
-Output from ngspice can be removed or cleared using the ClearStdOutput, RemoveRangeStdOutput, ClearAnalysisValues and RemoveRangeAnalysisValues functions.
+Output from ngspice can be removed or cleared using the `ClearStdOutput`, `RemoveRangeStdOutput`, `ClearAnalysisValues` and `RemoveRangeAnalysisValues` functions.
 All outputs are also cleared at the start of the analysis.
 
 ![image](Assets/BP_11.png)
