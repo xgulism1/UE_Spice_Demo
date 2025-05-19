@@ -68,12 +68,14 @@ To communicate with ngspice, construct an `NgspiceCircuit`.
 ![image](Assets/BP_01.png)
 
 To start an analysis, use the `StartAnalysis` function and provide a netlist.
-StepCount can be set to run only a fixed number of time-points and then pause or set (StepCount <= 0) to run until finish.
 The analysis starts in the background thread of ngspice.
+StepCount can be set to run only a fixed number of time-points and then pause or set (StepCount <= 0) to run until finish.
+The StepCount can be retrieved using the `GetStepCount` function.
 
 ![image](Assets/BP_02.png)
 
 To request a pause or resume of an analysis, use the `SetAnalysisShouldPause` function.
+The analysis does not pause immediately, because the background thread takes some time to stop.
 
 ![image](Assets/BP_03.png)
 
@@ -86,11 +88,12 @@ To stop an analysis, use the `StopAnalysis` function.
 ![image](Assets/BP_05.png)
 
 The `IsAnalysing` function indicates the analysis of the circuit is in progress.
-Ngspice can solve only one circuit at a time.
-In case more than one circuit starts the analysis, they are scheduled for ngspice to start one by one.
-Beware of paused analyses, the analysis of the next circuit cannot start while the previous one is paused.
 
 ![image](Assets/BP_06.png)
+
+Ngspice can solve only one circuit at a time.
+If multiple analyses are started simultaneously, they are scheduled to run one by one.
+Beware of paused analyses, the analysis of the next circuit cannot start while the previous one is paused.
 
 `AnalysisStartedDelegate` fires when the background thread starts.
 `AnalysisPausedDelegate` fires when the background thread pauses.
@@ -104,21 +107,21 @@ To get data during the analysis up to that point, the `Tick` event together with
 
 ![image](Assets/BP_08.png)
 
-To update an analysis, use the `UpdateAnalysisWithAlter`, `UpdateAnalysisWithAltermod` or `UpdateAnalysisWithStepCount` function.
+To update an analysis, use the `UpdateAnalysisWithStepCount`, `UpdateAnalysisWithAlter` or `UpdateAnalysisWithAltermod` function.
 The changes will be processed when the analysis starts or resumes.
 To apply the changes if the analysis is running, restart it by pausing it with the `SetAnalysisShouldPause` function and resuming it with the `SetAnalysisShouldPause` function after the `AnalysisPausedDelegate` is called.
 
 ![image](Assets/BP_09.png)
 
-Output from ngspice consists of Std Output (an Array of Strings) and Analysis Values (a Map of Vector2D Arrays).
-Std Output can be retrieved using the `GetStdOutput` function.
-Keys to the map of Analysis Values can be retrieved using the `GetAnalysisValueKeys` function.
+Output from ngspice consists of StdOutput (an array of Strings) and AnalysisValues (a map of Names as keys and Vector2D arrays as values).
+StdOutput can be retrieved using the `GetStdOutput` function.
+Keys to the map of AnalysisValues can be retrieved using the `GetAnalysisValueKeys` function.
 Each key is an input to the `GetAnalysisValues` function to get the array of values for the particular vector.
-Each value is a Vector2D to represent the real and imaginary parts.
+Values are Vector2Ds to represent the real and imaginary parts.
 
 ![image](Assets/BP_10.png)
 
-Output from ngspice can be removed or cleared using the `ClearStdOutput`, `RemoveRangeStdOutput`, `ClearAnalysisValues` and `RemoveRangeAnalysisValues` functions.
+Output from ngspice can be removed or cleared using the `ClearStdOutput`, `RemoveRangeStdOutput`, `ClearAnalysisValues` or `RemoveRangeAnalysisValues` function.
 All outputs are also cleared at the start of the analysis.
 
 ![image](Assets/BP_11.png)
