@@ -1,12 +1,15 @@
 # UE_Spice_Demo
+
 This is a demo project for the Spice plugin for [Unreal Engine](https://www.unrealengine.com) available on [Fab](https://www.fab.com/listings/791cc505-26d8-4130-8df7-682b3c859f90). The plugin utilizes [ngspice](https://ngspice.sourceforge.io/) - the spice simulator for electric and electronic circuits.
 
 ## Table of contents
-* [Demo project tutorial](#demo-project-tutorial)
-* [Blueprints tutorial](#blueprints-tutorial)
-* [License](#license)
+
+- [Demo project tutorial](#demo-project-tutorial)
+- [Blueprints tutorial](#blueprints-tutorial)
+- [License](#license)
 
 ## Demo project tutorial
+
 [Video demonstration](https://youtu.be/XACr_H5ea24)
 
 The demo project is made using Widget Blueprints.
@@ -63,6 +66,7 @@ The clear button clears the analysis data.
 ![image](Assets/Demo_11.png)
 
 ## Blueprints tutorial
+
 To communicate with ngspice, construct an `NgspiceCircuit`.
 
 ![image](Assets/BP_01.png)
@@ -130,5 +134,6 @@ Additional C++ functions are exposed for Blueprints to allow more performant man
 
 ![image](Assets/BP_12.png)
 
-# License
+## License
+
 Ngspice is open source under the [3-clause BSD license](https://sourceforge.net/p/ngspice/ngspice/ci/master/tree/COPYING).
