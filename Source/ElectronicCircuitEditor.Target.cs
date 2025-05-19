@@ -1,15 +1,14 @@
-// Copyright (C) 2022-2024 Martin Gulis. All Rights Reserved.
+// Copyright (C) 2022-2025 Martin Gulis. All Rights Reserved.
 
 using UnrealBuildTool;
-using System.Collections.Generic;
 
 public class ElectronicCircuitEditorTarget : TargetRules
 {
-	public ElectronicCircuitEditorTarget(TargetInfo Target) : base(Target)
-	{
-		Type = TargetType.Editor;
-        DefaultBuildSettings = BuildSettingsVersion.V4;
-        IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3;
-        ExtraModuleNames.AddRange( new string[] { "ElectronicCircuit" } );
-	}
+    public ElectronicCircuitEditorTarget(TargetInfo Target) : base(Target)
+    {
+        Type = TargetType.Editor;
+        DefaultBuildSettings = BuildSettingsVersion.Latest;
+        IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
+        ExtraModuleNames.AddRange(new string[] { "ElectronicCircuit" });
+    }
 }
