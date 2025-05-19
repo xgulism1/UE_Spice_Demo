@@ -1,4 +1,4 @@
-// Copyright (C) 2022-2024 Martin Gulis. All Rights Reserved.
+// Copyright (C) 2022-2025 Martin Gulis. All Rights Reserved.
 
 #pragma once
 
