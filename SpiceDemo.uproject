@@ -5,7 +5,7 @@
 	"Description": "",
 	"Modules": [
 		{
-			"Name": "ElectronicCircuit",
+			"Name": "SpiceDemo",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}
