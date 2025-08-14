@@ -2,12 +2,12 @@
 
 using UnrealBuildTool;
 
-public class ElectronicCircuitTarget : TargetRules
+public class SpiceDemoTarget : TargetRules
 {
-    public ElectronicCircuitTarget(TargetInfo Target) : base(Target)
+    public SpiceDemoTarget(TargetInfo Target) : base(Target)
     {
         Type = TargetType.Game;
         DefaultBuildSettings = BuildSettingsVersion.Latest;
-        ExtraModuleNames.AddRange(new string[] { "ElectronicCircuit" });
+        ExtraModuleNames.AddRange(new string[] { "SpiceDemo" });
     }
 }

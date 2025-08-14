@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class ElectronicCircuit : ModuleRules
+public class SpiceDemo : ModuleRules
 {
-    public ElectronicCircuit(ReadOnlyTargetRules Target) : base(Target)
+    public SpiceDemo(ReadOnlyTargetRules Target) : base(Target)
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
