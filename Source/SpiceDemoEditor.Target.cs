@@ -2,13 +2,13 @@
 
 using UnrealBuildTool;
 
-public class ElectronicCircuitEditorTarget : TargetRules
+public class SpiceDemoEditorTarget : TargetRules
 {
-    public ElectronicCircuitEditorTarget(TargetInfo Target) : base(Target)
+    public SpiceDemoEditorTarget(TargetInfo Target) : base(Target)
     {
         Type = TargetType.Editor;
         DefaultBuildSettings = BuildSettingsVersion.Latest;
         IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
-        ExtraModuleNames.AddRange(new string[] { "ElectronicCircuit" });
+        ExtraModuleNames.AddRange(new string[] { "SpiceDemo" });
     }
 }
