@@ -1,4 +1,4 @@
-// Copyright (C) 2022-2025 Martin Gulis. All Rights Reserved.
+// Copyright (C) 2022-2026 Martin Gulis. All Rights Reserved.
 
 using UnrealBuildTool;
 
@@ -8,6 +8,6 @@ public class SpiceDemoEditorTarget : TargetRules
     {
         Type = TargetType.Editor;
         DefaultBuildSettings = BuildSettingsVersion.Latest;
-        ExtraModuleNames.AddRange(new string[] { "SpiceDemo" });
+        ExtraModuleNames.Add("SpiceDemo");
     }
 }
